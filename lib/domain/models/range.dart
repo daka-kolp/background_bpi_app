@@ -7,7 +7,7 @@ class Range extends Equatable {
   const Range(this.min, this.max);
 
   factory Range.fromJson(Map<String, dynamic> json) {
-    return Range(json['min'] ?? 0.0, json['max'] ?? 0.0);
+    return Range(json['min'] as double? ?? 0.0, json['max'] as double? ?? 0.0);
   }
 
   Map<String, dynamic> toJson() {

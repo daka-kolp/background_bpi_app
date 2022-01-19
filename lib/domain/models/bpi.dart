@@ -7,7 +7,10 @@ class Bpi extends Equatable {
   const Bpi(this.code, this.rate);
 
   factory Bpi.fromJson(Map<String, dynamic> json) {
-    return Bpi(json['code'] ?? '', json['rate_float'] ?? 0.0);
+    return Bpi(
+      json['code'] as String? ?? '',
+      json['rate_float'] as double? ?? 0.0,
+    );
   }
 
   String get formattedRate {
