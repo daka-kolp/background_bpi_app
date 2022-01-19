@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:test_app/localization/generated/l10n.dart';
+import 'package:test_app/device/localization/generated/l10n.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);

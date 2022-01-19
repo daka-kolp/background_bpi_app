@@ -24,6 +24,9 @@ dev_dependencies:
 
   intl_utils: ^2.6.0
   flutter_lints: ^1.0.0
+  shared_preferences: ^2.0.12
+  flutter_bloc: ^8.0.1
+  get_it: ^7.2.0
 
 flutter:
   uses-material-design: true
@@ -33,5 +36,5 @@ flutter:
 flutter_intl:
   enabled: true
   main_locale: en
-  output_dir: lib/localization/generated
-  arb_dir: lib/localization
+  output_dir: lib/device/localization/generated
+  arb_dir: lib/device/localization

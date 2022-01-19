@@ -1,10 +1,18 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:test_app/localization/generated/l10n.dart';
-import 'package:test_app/ui/home_page.dart';
+import 'package:test_app/data/api/coindesk_api.dart';
+import 'package:test_app/device/localization/generated/l10n.dart';
+import 'package:test_app/device/store_interactor.dart';
+import 'package:test_app/domain/api_contracts/bpi_api.dart';
+import 'package:test_app/ui/home/home_page.dart';
+import 'package:get_it/get_it.dart';
 
 void main() {
+  GetIt.I
+    ..registerSingleton<StoreInteractor>(StoreInteractor())
+    ..registerSingleton<BpiApi>(CoindeskApi());
+
   runApp(const MyApp());
 }
 
