@@ -21,5 +21,15 @@ class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'en';
 
   final messages = _notInlinedMessages(_notInlinedMessages);
-  static Map<String, Function> _notInlinedMessages(_) => <String, Function>{};
+  static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "cannotBeEmpty":
+            MessageLookupByLibrary.simpleMessage("The field can not be empty"),
+        "maxValue": MessageLookupByLibrary.simpleMessage("Max Value"),
+        "maxValueIsLessThenMin": MessageLookupByLibrary.simpleMessage(
+            "The value is less than the max"),
+        "minValue": MessageLookupByLibrary.simpleMessage("Min Value"),
+        "minValueIsGreaterThenMax": MessageLookupByLibrary.simpleMessage(
+            "The value is greater than the max"),
+        "saveRange": MessageLookupByLibrary.simpleMessage("Save the Range")
+      };
 }

@@ -49,6 +49,66 @@ class S {
   static S? maybeOf(BuildContext context) {
     return Localizations.of<S>(context, S);
   }
+
+  /// `Min Value`
+  String get minValue {
+    return Intl.message(
+      'Min Value',
+      name: 'minValue',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Max Value`
+  String get maxValue {
+    return Intl.message(
+      'Max Value',
+      name: 'maxValue',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Save the Range`
+  String get saveRange {
+    return Intl.message(
+      'Save the Range',
+      name: 'saveRange',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The field can not be empty`
+  String get cannotBeEmpty {
+    return Intl.message(
+      'The field can not be empty',
+      name: 'cannotBeEmpty',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The value is greater than the max`
+  String get minValueIsGreaterThenMax {
+    return Intl.message(
+      'The value is greater than the max',
+      name: 'minValueIsGreaterThenMax',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The value is less than the max`
+  String get maxValueIsLessThenMin {
+    return Intl.message(
+      'The value is less than the max',
+      name: 'maxValueIsLessThenMin',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

@@ -1,1 +1,9 @@
-{}
+{
+  "@@locale": "en",
+  "minValue": "Min Value",
+  "maxValue": "Max Value",
+  "saveRange": "Save the Range",
+  "cannotBeEmpty": "The field can not be empty",
+  "minValueIsGreaterThenMax": "The value is greater than the max",
+  "maxValueIsLessThenMin": "The value is less than the max"
+}
