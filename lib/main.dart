@@ -62,7 +62,7 @@ void callbackDispatcher() {
     flnp.initialize(
       const InitializationSettings(
         android: AndroidInitializationSettings('@mipmap/ic_launcher'),
-        iOS: IOSInitializationSettings(),
+        iOS: DarwinInitializationSettings(),
       ),
     );
 
@@ -73,7 +73,7 @@ void callbackDispatcher() {
         priority: Priority.high,
         importance: Importance.max,
       ),
-      iOS: IOSNotificationDetails(),
+      iOS: DarwinNotificationDetails(),
     );
 
     final _storeInteractor = StoreInteractor();

@@ -1,5 +1,3 @@
-import 'dart:convert';
-
 import 'package:dio/dio.dart';
 import 'package:test_app/domain/api_contracts/bpi_api.dart';
 import 'package:test_app/domain/models/bpi.dart';
@@ -11,8 +9,7 @@ class CoindeskApi extends BpiApi {
   @override
   Future<Bpi> getCurrentBpiInUsd() async {
     final response = await _client.get('$_baseLink/bpi/currentprice/USD.json');
-    final json = jsonDecode(response.data);
-    final bpiUsdJson = json['bpi']['USD'];
+    final bpiUsdJson = response.data ['bpi']['USD'];
     return bpiUsdJson != null
         ? Bpi.fromJson(bpiUsdJson)
         : throw Exception('getCurrentBpiUsd: json is null');
