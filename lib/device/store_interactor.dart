@@ -12,6 +12,7 @@ class StoreInteractor {
     if(rangeJson != null) {
       return Range.fromJson(jsonDecode(rangeJson));
     }
+    return null;
   }
 
   Future<void> setRange(Range range) async {

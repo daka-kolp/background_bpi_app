@@ -7,7 +7,7 @@ import 'package:test_app/domain/models/range.dart';
 import 'package:test_app/ui/home/home_cubit.dart';
 
 class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
+  const HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -37,9 +37,9 @@ class BpiInputForm extends StatefulWidget {
   final Range? initRange;
 
   const BpiInputForm({
-    Key? key,
+    super.key,
     required this.initRange,
-  }) : super(key: key);
+  });
 
   @override
   _BpiInputFormState createState() => _BpiInputFormState();
@@ -67,6 +67,7 @@ class _BpiInputFormState extends State<BpiInputForm> {
               if (_toDouble(value) > _toDouble(_maxKey.currentState?.value)) {
                 return _localization.minValueIsGreaterThenMax;
               }
+              return null;
             },
           ),
           const SizedBox(height: 16.0),
@@ -77,6 +78,7 @@ class _BpiInputFormState extends State<BpiInputForm> {
               if (_toDouble(value) < _toDouble(_minKey.currentState?.value)) {
                 return _localization.maxValueIsLessThenMin;
               }
+              return null;
             },
           ),
           const SizedBox(height: 16.0),
@@ -112,11 +114,10 @@ class _BpiInputFormState extends State<BpiInputForm> {
 
 class CustomTextFormField extends TextFormField {
   CustomTextFormField({
-    Key? key,
+    super.key,
     required String hintText,
     required FormFieldValidator<String> validator,
   }) : super(
-          key: key,
           textAlign: TextAlign.center,
           decoration: InputDecoration(hintText: hintText),
           keyboardType: TextInputType.number,

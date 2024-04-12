@@ -33,7 +33,7 @@ Future<void> main() async {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -76,11 +76,11 @@ void callbackDispatcher() {
       iOS: DarwinNotificationDetails(),
     );
 
-    final _storeInteractor = StoreInteractor();
-    final _api = CoindeskApi();
+    final storeInteractor = StoreInteractor();
+    final api = CoindeskApi();
 
-    final bpi = await _api.getCurrentBpiInUsd();
-    final range = await _storeInteractor.getRange();
+    final bpi = await api.getCurrentBpiInUsd();
+    final range = await storeInteractor.getRange();
 
     if (range != null) {
       if (bpi.rate < range.min) {
