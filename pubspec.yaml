@@ -22,6 +22,7 @@ dependencies:
   get_it: ^7.6.9
   flutter_local_notifications: ^17.0.0
   flutter_bloc: ^8.1.5
+  injectable: any
 
 dev_dependencies:
   flutter_test:
@@ -29,6 +30,8 @@ dev_dependencies:
 
   intl_utils: ^2.8.7
   flutter_lints: ^3.0.2
+  build_runner: ^2.4.9
+  injectable_generator: ^2.6.1
 
 flutter:
   uses-material-design: true
