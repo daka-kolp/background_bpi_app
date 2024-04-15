@@ -15,7 +15,7 @@ Future<void> main() async {
 
   await configureDependencies();
 
-  await BackgroundService.initialize();
+  await initializeBackgroundTask();
 
   runApp(const _MyApp());
 }
