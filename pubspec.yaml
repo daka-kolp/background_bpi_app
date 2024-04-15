@@ -21,8 +21,8 @@ dependencies:
 #  workmanager: ^0.5.2
   workmanager:
     git:
-      url: https://github.com/absar/flutter_workmanager.git
-      ref: 73cc539
+      url: https://github.com/fluttercommunity/flutter_workmanager.git
+      ref: b783000c18f6e066f3d81d5ecc352f3ce61860f6
   shared_preferences: ^2.2.3
   shared_preferences_android: ^2.2.2
   shared_preferences_ios: ^2.1.1

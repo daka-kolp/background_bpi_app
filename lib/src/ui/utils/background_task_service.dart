@@ -26,11 +26,12 @@ Future<void> initializeBackgroundTask() async {
 @pragma('vm:entry-point')
 void _callbackDispatcher() {
   _workmanager.executeTask((task, inputData) async {
-    final ns = NotificationService();
     await configureDependencies();
+
     final bpi = await getIt<BpiService>().getCurrentBpiInUsd();
     final range = await getIt<RangeService>().getRange();
 
+    final ns = NotificationService();
     if (range != null) {
       if (bpi.rate < range.min) {
         ns.showNotification(title: _appName, body: 'BPI < ${range.min}');

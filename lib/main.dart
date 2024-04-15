@@ -6,7 +6,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:test_app/src/infrastructure/di/di.dart';
 import 'package:test_app/src/ui/l10n/generated/l10n.dart';
 import 'package:test_app/src/ui/pages/main/main_page.dart';
-import 'package:test_app/src/ui/utils/background_service.dart';
+import 'package:test_app/src/ui/utils/background_task_service.dart';
 
 const _appName = 'Coindesk Test';
 
