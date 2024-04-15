@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:injectable/injectable.dart';
 
@@ -16,7 +17,11 @@ class BpiCubit extends Cubit<Bpi?> {
   }
 
   Future<void> _checkCurrentBpi() async {
-    final value = await _bpiService.getCurrentBpiInUsd();
-    emit(value);
+    try {
+      final value = await _bpiService.getCurrentBpiInUsd();
+      emit(value);
+    } catch (e) {
+      debugPrint('BpiCubit error: $e');
+    }
   }
 }
